@@ -1,0 +1,63 @@
+version: '3'
+
+services:
+
+  mariadb:
+    image: mariadb:5
+    container_name: mariadb
+    #build: ./database
+    environment:
+      MYSQL_DATABASE: 'tinyurl'
+      # MYSQL_USER: 'tinyuser'
+      # MYSQL_PASSWORD: 'Allah700'
+      MYSQL_ROOT_PASSWORD: 'Allah700'
+    # ports:
+    #   - 3306:3306
+    # networks:
+    #   - gateway
+    # volumes:
+    #  - /home/allah/mysql-docker:/var/lib/mysql
+      #- ./ucom-docker/dev/mysql/bootstrap.sql:/docker-entrypoint-initdb.d/bootstrap.sql
+      #- ./database/fiservdevr1db_01112021.sql:/docker-entrypoint-initdb.d/fiservdevr1db_01112021.sql
+  redis:
+    image: redis
+    container_name: redis
+    hostname: redis
+    restart: always
+    # ports:
+    #   - 6379:6379
+    # networks:
+    #   - gateway
+
+  tinyurlwebserver:
+    image: tinyurlweb1.0
+    container_name: tinyurlwebserver
+    build: ./tinyurlwebserver
+    #restart: always
+    ports:
+      - 9000:9000
+    depends_on:
+      - mariadb
+      - kgsserver
+    # networks:
+    #   - gateway
+
+  kgsserver:
+    image: kgs1.0
+    container_name: kgsserver
+    build: ./kgsserver
+    restart: always
+    # ports:
+    #   - 9001:9001
+    depends_on:
+      - redis
+    # networks:
+    #   - gateway
+
+    #command: redis-server --requirepass password
+networks:
+    default:
+        name: tinyurlnet
+        driver: bridge
+# networks:
+#   gateway: {}
