@@ -37,5 +37,9 @@ Step 3 : docker-compose up --build  (only for the first time otherwise remove th
 ```
 
 ### Known issues:
+Docker for the MySQL needs to be mounted for the real application. Currently it is not.
 
 # Need to improve
+- Add the integration test case.
+- Add the resiliency using Hystrix when calling the upstream service.
+- Move the keys generation logic into the startup SQL script and use LOAD FILE of MySQL to load the data during the app start up.
