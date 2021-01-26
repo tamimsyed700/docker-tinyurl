@@ -43,3 +43,8 @@ Docker for the MySQL needs to be mounted for the real application. Currently it 
 - Add the integration test case.
 - Add the resiliency using Hystrix when calling the upstream service.
 - Move the keys generation logic into the startup SQL script and use LOAD FILE of MySQL to load the data during the app start up.
+- Add user centric logic for the keys
+- Add API rate limiting logic.
+- Add Monitoring support.
+- Add Request ID and the Trace ID logic for the Application.
+- Add the Redis listener logic when the keys gets expired and do some clean up operation.
