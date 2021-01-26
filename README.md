@@ -27,7 +27,7 @@ It does the following things:
 - Maven 3.6.3+
 
 ```
-Step 1 : git clone 
+Step 1 : git clone https://github.com/tamimsyed700/docker-tinyurl.git
 ```
 ```
 Step 2 : On the root folder, run mvn clean packages -DskipTests
