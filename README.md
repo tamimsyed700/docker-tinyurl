@@ -18,7 +18,7 @@ It does the following things:
 - **GetURL**- It will get the URL by getting the key from the Redis via Microservice or send the 204 No content to the client.
 
 # Architecture of the TinyURL System Design
-![Google](./images/HighLevelTinyUrl.png)
+![https://www.educative.io/courses/grokking-the-system-design-interview](./images/HighLevelTinyUrl.png)
 # Getting Started
 ## System Requirement
 
