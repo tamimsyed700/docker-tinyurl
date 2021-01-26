@@ -35,9 +35,6 @@ Step 2 : On the root folder, run mvn clean packages -DskipTests
 ```
 Step 3 : docker-compose up --build  (only for the first time otherwise remove the --build)
 ```
-```
-Step 4 : 
-```
 
 ### Known issues:
 
