@@ -19,3 +19,26 @@ It does the following things:
 
 # Architecture of the TinyURL System Design
 ![Google](https://www.google.com/logos/doodles/2021/india-republic-day-2021-6753651837108846-l.png)
+# Getting Started
+## System Requirement
+
+- Docker/Podman
+- Java 8+
+- Maven 3.6.3+
+
+```
+Step 1 : git clone 
+```
+```
+Step 2 : On the root folder, run mvn clean packages -DskipTests
+```
+```
+Step 3 : docker-compose up --build  (only for the first time otherwise remove the --build)
+```
+```
+Step 4 : 
+```
+
+### Known issues:
+
+# Need to improve
